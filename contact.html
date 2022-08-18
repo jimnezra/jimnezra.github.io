@@ -3,10 +3,10 @@
 <html lang="en-MX">
     <head>
         <meta charset="utf-8">
-        <title>Dr. Alejandro Jimenez Rios - Contact</title>
+        <title>Dr. Alejandro Jimenez Rios</title>
         <style>
             body {
-                background-color: #222222;
+                background-color: #000000;
                 color: #ffffff;
                 margin: 0 10%;
                 font-family: serif;
@@ -15,20 +15,61 @@
                 text-align: center;
                 font-family: sans-serif;
                 font-weight: normal;
-                text-transform: uppercase;
+                /* text-transform: uppercase; */
                 /* border-bottom: 1px solid #57b1dc; */
                 margin-top: 30px;
             }
             h2 {
-                color: #aaaaaa;
+                color: #ffffff;
                 font-size: 1.5em;
+            }
+            td, th {
+                border: 1px solid #ffffff;
+            }
+            /* unvisited link */
+            a:link {
+                color: #00ffff;
+                text-decoration: none;
+            }
+            /* visited link */
+            a:visited {
+                color: #008b8b;
+                text-decoration: none;
+            }
+            /* mouse over link */
+            a:hover {
+                color: #ffffff;
+                text-decoration: none;
+                font-size:125%;
+            }
+            /* selected link */
+            a:active {
+                color: #008b8b;
+                text-decoration: none;
             }
         </style>
     </head>
 
     <body>
         <header role="banner">
-            <h1 id="header_text"><img src="/images/logo.png" alt="logo" id="header_logo"><br>Dr. Alejandro Jimenez Rios<br></h1>
+            <h1 id="header_text">
+                <img id="header_logo"
+                src="/images/logo.png" alt="logo" 
+                srcset="/images/logo2x.png 700w,
+                        /images/logo3x.png 1001w"
+                sizes="(max-width: 350px) 50vw,
+                        (max-width: 960px) 40vw,
+                        350px">
+                <br>Dr. Alejandro Jimenez Rios<br>
+            </h1>
+            <!-- To insert the logo in svg format with png fallback 
+                <h1 id="header_text">
+                <object type="image/svg+xml" data="/inkscapes/logo.svg">
+                    <img src="/images/logo.png" alt="logo">
+                </object>
+                <br>Dr. Alejandro Jimenez Rios<br>
+                </h1> 
+            -->
             <nav id="header_navigation">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
@@ -45,8 +86,51 @@
 
         <main role="main">
             <section class="home_section" id="home_section_about">
-                <h2 class="home_section_title">About</h2>
-                <p>The Black Goose Bistro offers casual lunch and dinner fare in a relaxed atmosphere. The menu changes regularly to highlight the freshest local ingredients.</p>
+                <h2 class="home_section_title">Get in touch!</h2>
+                <form action="/python/get_in_touch.php" method="POST">
+                    <fieldset>
+                        <legend>Would you like to know more?</legend>
+                        <p>Ask a question or leave a comment...</p>
+                        <ol>
+                            <li><label for="firstlast">Name:</label>
+                                <input type="text" 
+                                        name="fullname" 
+                                        id="firstlast" 
+                                        maxlength="50"
+                                        minlength="1"
+                                        placeholder="Max 50 characters..."></li>
+                            <li><label for="email">Email:</label>
+                                <input type="email" 
+                                        name="email" 
+                                        id="email"
+                                        maxlength="50"
+                                        minlength="3"
+                                        placeholder="Max 50 characters..."></li>
+                            <li><label for="topic">Topic:</label>
+                                <input type="text" 
+                                        list="topic" 
+                                        name="topic"
+                                        placeholder="Select one...">
+                                <datalist id="topic">
+                                    <option value="Education">
+                                    <option value="Research">
+                                    <option value="Teaching">
+                                    <option value="Industry">
+                                    <option value="Programming">
+                                    <option value="Other">
+                                </datalist></li>
+                            <li><label for="que_com">Question or comment:</label>
+                                <textarea name="que_com" 
+                                            maxlength="500"
+                                            minlength="1"
+                                            rows="5"
+                                            cols="100"
+                                            placeholder="Max 500 characters..."></textarea></li>
+                        </ol>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </fieldset>
+                    </form>
                 <hr>
             </section>
         </main>
