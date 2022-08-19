@@ -6,7 +6,7 @@
         <title>Dr. Alejandro Jimenez Rios - Programming</title>
         <style>
             body {
-                background-color: #222222;
+                background-color: #000000;
                 color: #ffffff;
                 margin: 0 10%;
                 font-family: serif;
@@ -15,20 +15,61 @@
                 text-align: center;
                 font-family: sans-serif;
                 font-weight: normal;
-                text-transform: uppercase;
+                /* text-transform: uppercase; */
                 /* border-bottom: 1px solid #57b1dc; */
                 margin-top: 30px;
             }
             h2 {
-                color: #aaaaaa;
+                color: #ffffff;
                 font-size: 1.5em;
+            }
+            td, th {
+                border: 1px solid #ffffff;
+            }
+            /* unvisited link */
+            a:link {
+                color: #00ffff;
+                text-decoration: none;
+            }
+            /* visited link */
+            a:visited {
+                color: #008b8b;
+                text-decoration: none;
+            }
+            /* mouse over link */
+            a:hover {
+                color: #ffffff;
+                text-decoration: none;
+                font-size:125%;
+            }
+            /* selected link */
+            a:active {
+                color: #008b8b;
+                text-decoration: none;
             }
         </style>
     </head>
 
     <body>
         <header role="banner">
-            <h1 id="header_text"><img src="/images/logo.png" alt="logo" id="header_logo"><br>Dr. Alejandro Jimenez Rios<br></h1>
+            <h1 id="header_text">
+                <img id="header_logo"
+                src="/images/logo.png" alt="logo" 
+                srcset="/images/logo2x.png 700w,
+                        /images/logo3x.png 1001w"
+                sizes="(max-width: 350px) 50vw,
+                        (max-width: 960px) 40vw,
+                        350px">
+                <br>Dr. Alejandro Jimenez Rios<br>
+            </h1>
+            <!-- To insert the logo in svg format with png fallback 
+                <h1 id="header_text">
+                <object type="image/svg+xml" data="/inkscapes/logo.svg">
+                    <img src="/images/logo.png" alt="logo">
+                </object>
+                <br>Dr. Alejandro Jimenez Rios<br>
+                </h1> 
+            -->
             <nav id="header_navigation">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
@@ -44,9 +85,94 @@
         </header>
 
         <main role="main">
-            <section class="home_section" id="home_section_about">
-                <h2 class="home_section_title">About</h2>
-                <p>The Black Goose Bistro offers casual lunch and dinner fare in a relaxed atmosphere. The menu changes regularly to highlight the freshest local ingredients.</p>
+            <section class="home_section" id="programming_section_iframe">
+                <h2 class="home_section_title">Embedded iframe</h2>
+                <p>This is the first video ever uploaded to youtube:</p>
+                <iframe width="560" 
+                        height="315" 
+                        src="https://www.youtube-nocookie.com/embed/jNQXAC9IVRw" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <hr>
+            </section>
+            <section class="home_section" id="programming_section_video">
+                <h2 class="home_section_title">Embedded video</h2>
+                <p>Here is a video of some rocks and a waterfall:</p>
+                <video src="/videos/Nature.mp4" 
+                        width="640" 
+                        height="360"
+                        poster="/images/logo.png" 
+                        controls>See the original video at: <a
+                        href="https://pixabay.com/videos/nature-waves-ocean-sea-rock-31377/">MP4 video</a>
+                </video>
+                <hr>
+            </section>
+            <section class="home_section" id="programming_section_audio">
+                <h2 class="home_section_title">Embedded audio</h2>
+                <p>Here is a cool chilling song:</p>
+                <audio src="/music/goldn.mp3" 
+                        controls>Music by <a href="https://pixabay.com/users/prazkhanal-24653570/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=116392">prazkhanal</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=116392">Pixabay</a>
+                </audio>
+                <hr>
+            </section>
+            <section class="home_section" id="programming_section_canvas">
+                <h2 class="home_section_title">Embedded canvas</h2>
+                <p>Hello canvas!</p>
+                <canvas width="400" 
+                        height="200"
+                        id="my_first_canvas">
+                    <script type="text/javascript">
+                        window.addEventListener('load', eventWindowLoaded, false);
+                        function eventWindowLoaded() {
+                            canvasApp();
+                        }
+                        function canvasApp(){
+                        var theCanvas = document.getElementById('my_first_canvas');
+                        var my_canvas = theCanvas.getContext('2d');
+                        my_canvas.strokeRect(0,0,200,225)
+                        // to start, draw a border around the canvas
+                        //draw face
+                        my_canvas.beginPath();
+                        my_canvas.arc(100, 100, 75, (Math.PI/180)*0, (Math.PI/180)*360, false);
+                        // circle dimensions
+                        my_canvas.strokeStyle = "black"; // circle outline is black
+                        my_canvas.lineWidth = 3; // outline is three pixels wide
+                        my_canvas.fillStyle = "yellow"; // fill circle with yellow
+                        my_canvas.stroke(); // draw circle
+                        my_canvas.fill(); // fill in circle
+                        my_canvas.closePath();
+                        // now, draw left eye
+                        my_canvas.fillStyle = "black"; // switch to black for the fill
+                        my_canvas.beginPath();
+                        my_canvas.arc(65, 70, 10, (Math.PI/180)*0, (Math.PI/180)*360, false);
+                        // circle dimensions
+                        my_canvas.stroke(); // draw circle
+                        my_canvas.fill(); // fill in circle
+                        my_canvas.closePath();
+                        // now, draw right eye
+                        my_canvas.beginPath();
+                        my_canvas.arc(135, 70, 10, (Math.PI/180)*0, (Math.PI/180)*360, false);
+                        // circle dimensions
+                        my_canvas.stroke(); // draw circle
+                        my_canvas.fill(); // fill in circle
+                        my_canvas.closePath();
+                        // draw smile
+                        my_canvas.lineWidth = 6; // switch to six pixels wide for outline
+                        my_canvas.beginPath();
+                        my_canvas.arc(99, 120, 35, (Math.PI/180)*0, (Math.PI/180)*-180, false);
+                        // semicircle dimensions
+                        my_canvas.stroke();
+                        my_canvas.closePath();
+                        // Smiley Speaks!
+                        my_canvas.fillStyle = "white"; // switch to black for text fill
+                        my_canvas.font = '20px _sans'; // use 20 pixel sans serif font
+                        my_canvas.fillText ("Hello Canvas!", 45, 200); // write text
+                        }
+                    </script>Your browser does not support HTML5 canvas. Try using Chrome, Firefox, Safari or MS Edge.
+                </canvas>
+                
                 <hr>
             </section>
         </main>
