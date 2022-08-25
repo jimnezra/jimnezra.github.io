@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/* GENERAL STYLES */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0 10%;
+    font-family: serif;
+}
+/* unvisited link */
+a:link {
+    color: #00ffff;
+    text-decoration: none;
+}
+/* visited link */
+a:visited {
+    color: #00ffff;
+    text-decoration: none;
+}
+/* mouse over link */
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+/* selected link */
+a:active {
+    color: #008b8b;
+    text-decoration: none;
+}
+
+
+/* HEADER STYLES */
+/* header {
+    background-color: #000000;
+} */
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: normal;
+    /* text-transform: uppercase; */
+    /* border-bottom: 1px solid #57b1dc; */
+    margin-top: 30px;
+}
+
+
+/* MAIN STYLES */
+/* main {
+    background-color: #999999;
+} */
+h2 {
+    color: #ffffff;
+    font-size: 1.5em;
+}
+td, th {
+    border: 1px solid #ffffff;
+}
+
+
+/* FOOTER STYLES */
+/* footer {
+    background-color: #000000;
+} */
+
+
+
+
+
+
+
+
+
+
