@@ -1,38 +1,8 @@
 @charset "UTF-8";
 
+
 /* LOADING FONTS */
-@font-face {
-    font-family: Roboto-Bold;
-    src: url(fonts/Roboto/Roboto-Bold.ttf);
-}
-@font-face {
-    font-family: Roboto-BoldItalic;
-    src: url(fonts/Roboto/Roboto-BoldItalic.ttf);
-}
-@font-face {
-    font-family: Roboto-Medium;
-    src: url(fonts/Roboto/Roboto-Medium.ttf);
-}
-@font-face {
-    font-family: Roboto-MediumItalic;
-    src: url(fonts/Roboto/Roboto-MediumItalic.ttf);
-}
-@font-face {
-    font-family: Roboto-Regular;
-    src: url(fonts/Roboto/Roboto-Regular.ttf);
-}
-@font-face {
-    font-family: Roboto-Italic;
-    src: url(fonts/Roboto/Roboto-Italic.ttf);
-}
-@font-face {
-    font-family: Roboto-Light;
-    src: url(fonts/Roboto/Roboto-Light.ttf);
-}
-@font-face {
-    font-family: Roboto-LightItalic;
-    src: url(fonts/Roboto/Roboto-LightItalic.ttf);
-}
+@import url("/css/fonts.css");
 
 
 /* GENERAL STYLES */
@@ -42,15 +12,13 @@ html {
 body {
     font-family: Roboto-Light, sans-serif;
     font-size: 1rem;
-    /* font-weight: lighter;
-    font-style: normal;
-    font-variant: normal;
-    font-stretch: normal;
-    font-variant-numeric: slashed-zero;
-    font-kerning: normal;  */
     background-color: #000000;
     color: #ffffff;
-    margin: 0 10%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+hr {
+    border: black;
 }
 /* unvisited link */
 a:link {
@@ -61,6 +29,11 @@ a:link {
 a:visited {
     color: #00ffff;
     text-decoration: none;
+}
+/* focus link */
+a:focus {
+    color: #ffffff;
+    text-decoration: underline;
 }
 /* mouse over link */
 a:hover {
@@ -76,38 +49,68 @@ a:active {
 
 /* HEADER STYLES */
 header {
-    background-color: #0F0F0F;
+    background-color: #0f0f0f;
 }
 h1 {
+    background-image: url(/images/geometric-1280x924.png);
+    background-position: center center;
     font-family: Roboto-Bold, sans-serif;
     font-size: 3rem;
     text-align: center;
-    margin-top: 30px;
-    text-shadow: 0 -.1em 1em white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* text-shadow: 0 -.1em 1em white; */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    /* border: 1px dashed; */
+}
+#header_logo {
+    margin-top: 1%;
+}
+#header_navigation {
+    background-image: linear-gradient(to top, #0f0f0f, black);
 }
 #header_navigation ul {
     list-style-type: none;
+    padding: 0 10%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 
 /* MAIN STYLES */
 /* main {
-    background-color: #0F0F0F;
+    background-color: #0f0f0f;
 } */
-section {
-    background-color: #0F0F0F;
-}
 h2 {
     font-family: Roboto-Medium, sans-serif;
     font-size: 2rem;
     color: #ffffff;
     text-transform: capitalize;
+    margin-top: 0;
+}
+h2::first-letter {
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    color: #00ffff;
 }
 h3 {
     font-family: Roboto-Regular, sans-serif;
     font-size: 1.5rem;
     color: #ffffff;
     text-transform: capitalize;
+}
+section {
+    background-color: #0f0f0f;
+    /* margin: 0 1%; */
+    padding: 0 10%;
+    padding-bottom: .1rem;
+    /* background-image: linear-gradient(to top right, black, #0f0f0f 50%); */
+    background-image: radial-gradient(black, #0f0f0f);
 }
 td, th {
     border: 1px solid #ffffff;
@@ -128,15 +131,36 @@ p {
 h2 + p {
     text-indent: 0;
 }
+form {
+    padding-bottom: 10px;
+}
+table {
+    padding-bottom: 10px;
+}
 
 
 /* FOOTER STYLES */
 footer {
-    background-color: #0F0F0F;
+    background-color: #0f0f0f;
+}
+#footer_container {
+    background-image: linear-gradient(to bottom, #0f0f0f, black);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 #footer_navigation ul {
     list-style-type: square;
     list-style-position: outside;
+}
+#footer_copyright {
+    margin-bottom: 0;
+    margin-top: 0;
+    background-image: url(/images/geometric-1280x924.png);
+    background-position: center center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: center;
 }
 
 
