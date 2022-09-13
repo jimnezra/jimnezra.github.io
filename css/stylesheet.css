@@ -122,22 +122,43 @@ section {
 td, th {
     border: 1px solid #ffffff;
 }
+#home_about_figure {
+    float: right;
+    width: 50%;
+    margin: 0 0 0.25rem 2rem;
+    /* shape-outside: ellipse(300px 150px at 50% 50%); */
+}
+#home_about_figure picture img {
+    border-radius: 2%;
+}
+#home_section_industry {
+    position: relative;
+}
+#home_industry_figure {
+    margin: 0;
+    position: absolute;
+    right: 5%;
+    bottom: -20%;
+    z-index: 0;
+}
 figcaption {
     font-family: Roboto-LightItalic, sans-serif;
     font-size: 0.75rem;
     color: #ffffff;
+    text-align: right;
+    margin-top: 0.5rem;
 }
 p {
     line-height: 1.5em;
-    text-indent: 2em;
+    /* text-indent: 2em; */
     text-align: justify;
     letter-spacing: 1px;
     /* display: list-item;
     list-style-type: lower-greek; */
 }
-h2 + p {
+/* h2 + p {
     text-indent: 0;
-}
+} */
 form {
     padding-bottom: 10px;
 }
