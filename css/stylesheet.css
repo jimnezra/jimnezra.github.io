@@ -8,17 +8,21 @@
 /* GENERAL STYLES */
 html {
     font-size: 100%;
+    box-sizing: border-box;
     }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 body {
     font-family: Roboto-Light, sans-serif;
     font-size: 1rem;
     background-color: #000000;
     color: #ffffff;
     margin: 0 !important;
-    padding: 0 !important;
 }
 hr {
-    border: black;
+    margin: 5px;
+    border-color: #000000;
 }
 /* unvisited link */
 a:link {
@@ -57,11 +61,8 @@ h1 {
     font-family: Roboto-Bold, sans-serif;
     font-size: 3rem;
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    /* text-shadow: 0 -.1em 1em white; */
+    margin: 0px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    /* border: 1px dashed; */
 }
 #header_logo {
     margin-top: 1%;
@@ -71,15 +72,23 @@ h1 {
 }
 #header_navigation ul {
     list-style-type: none;
-    padding: 0 10%;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin-top: 0;
-    margin-bottom: 0;
+    padding: 10px 10%;
+    margin: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+#header_navigation ul li {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00ffff;
+    border-radius: 1em;
+    padding: 0.25em 1.0em;
+    box-shadow: #00ffff 0 2px 1px;
+}
+/* #header_navigation ul li {
+    outline: solid 3px #00ffff;
+} */
 
 
 /* MAIN STYLES */
@@ -106,11 +115,9 @@ h3 {
 }
 section {
     background-color: #0f0f0f;
-    /* margin: 0 1%; */
     padding: 0 10%;
     padding-bottom: .1rem;
-    /* background-image: linear-gradient(to top right, black, #0f0f0f 50%); */
-    background-image: radial-gradient(black, #0f0f0f);
+    background-image: radial-gradient(black, #0f0f0f 50%);
 }
 td, th {
     border: 1px solid #ffffff;
@@ -145,18 +152,15 @@ footer {
 }
 #footer_container {
     background-image: linear-gradient(to bottom, #0f0f0f, black);
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin-top: 0;
-    margin-bottom: 0;
+    padding: 10px 10%;
 }
 #footer_navigation ul {
     list-style-type: square;
     list-style-position: outside;
 }
 #footer_copyright {
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 0px;
+    padding: 10px;
     background-image: url(/images/geometric-1280x924.png);
     background-position: center center;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
