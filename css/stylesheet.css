@@ -127,11 +127,17 @@ td, th {
 #home_about_figure {
     float: right;
     width: 40%;
-    margin: 0.83rem 0 0.25rem 2rem;
-    /* shape-outside: ellipse(300px 150px at 50% 50%); */
+    margin: 0.83rem 0 0.5rem 10%;
+    shape-outside: circle(50%);
+}
+/* Clearfix */
+#home_section_about::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 #home_about_figure picture img {
-    border-radius: 2%;
+    border-bottom-left-radius: 10rem;
 }
 #home_section_industry {
     position: relative;
@@ -148,7 +154,7 @@ figcaption {
     font-size: 0.75rem;
     color: #ffffff;
     text-align: right;
-    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 p {
     line-height: 1.5em;
@@ -172,14 +178,25 @@ table {
 /* FOOTER STYLES */
 footer {
     background-color: #0f0f0f;
+    display: grid;
+    grid-template-rows: auto 40px;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-areas: "Left  Center  Right"
+                         "Copy  Copy    Copy";
 }
 #footer_container {
     background-image: linear-gradient(to bottom, #0f0f0f, black);
     padding: 10px 10%;
+    grid-area: Center;
+}
+#footer_container * {
+    /* margin: auto; */
+    text-align: center;
 }
 #footer_navigation ul {
-    list-style-type: square;
+    list-style-type: none;
     list-style-position: outside;
+    padding: 0%;
 }
 #footer_copyright {
     margin: 0px;
@@ -188,6 +205,13 @@ footer {
     background-position: center center;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-align: center;
+    grid-area: Copy;
+}
+#footer_left {
+    background-image: linear-gradient(to bottom, #0f0f0f, black);
+}
+#footer_right {
+    background-image: linear-gradient(to bottom, #0f0f0f, black);
 }
 
 
