@@ -56,16 +56,17 @@ header {
     background-color: #0f0f0f;
 }
 h1 {
-    background-image: url(/images/geometric-1280x924.png);
+    background-image: url(/images/geometric-640x462.png);
     background-position: center center;
     font-family: Roboto-Bold, sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin: 0px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 #header_logo {
     margin-top: 1%;
+    max-width: 25vw;
 }
 #header_navigation {
     background-image: linear-gradient(to top, #0f0f0f, black);
@@ -80,17 +81,13 @@ h1 {
     justify-content: space-evenly;
 }
 #header_navigation ul li {
-    /* flex: 1 1 auto; */
     border-style: solid;
     border-width: 1px;
     border-color: #00ffff;
     border-radius: 1em;
-    padding: 0.25em 1.0em;
+    padding: 0.25em 0.5em;
     box-shadow: #00ffff 0 2px 1px;
 }
-/* #header_navigation ul li {
-    outline: solid 3px #00ffff;
-} */
 
 
 /* MAIN STYLES */
@@ -99,10 +96,11 @@ h1 {
 } */
 h2 {
     font-family: Roboto-Medium, sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #ffffff;
     text-transform: capitalize;
     margin-top: 0;
+    text-align: center;
 }
 h2::first-letter {
     font-size: 150%;
@@ -111,13 +109,14 @@ h2::first-letter {
 }
 h3 {
     font-family: Roboto-Regular, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #ffffff;
     text-transform: capitalize;
+    text-align: center;
 }
 section {
     background-color: #0f0f0f;
-    padding: 0 10%;
+    padding: 0 4%;
     padding-bottom: .1rem;
     background-image: radial-gradient(black, #0f0f0f 50%);
 }
@@ -125,19 +124,15 @@ td, th {
     border: 1px solid #ffffff;
 }
 #home_about_figure {
-    float: right;
-    width: 40%;
-    margin: 0.83rem 0 0.5rem 10%;
+    float: center;
+    width: 50%;
+    margin: 0 auto 0;
     shape-outside: circle(50%);
 }
-/* Clearfix */
-#home_section_about::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 #home_about_figure picture img {
-    border-bottom-left-radius: 10rem;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 #home_section_industry {
     position: relative;
@@ -149,24 +144,17 @@ td, th {
     bottom: -20%;
     z-index: 0;
 }
-figcaption {
-    font-family: Roboto-LightItalic, sans-serif;
-    font-size: 0.75rem;
-    color: #ffffff;
-    text-align: right;
-    margin-bottom: 0.5rem;
+#home_about_fig_cap div {
+    display: none;
 }
 p {
-    line-height: 1.5em;
+    line-height: 1.2em;
     /* text-indent: 2em; */
-    text-align: justify;
-    letter-spacing: 1px;
+    text-align: center;
+    letter-spacing: 0.5px;
     /* display: list-item;
     list-style-type: lower-greek; */
 }
-/* h2 + p {
-    text-indent: 0;
-} */
 form {
     padding-bottom: 10px;
 }
@@ -179,18 +167,17 @@ table {
 footer {
     background-color: #0f0f0f;
     display: grid;
-    grid-template-rows: auto 40px;
-    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1% 98% 1%;
     grid-template-areas: "Left  Center  Right"
                          "Copy  Copy    Copy";
 }
 #footer_container {
     background-image: linear-gradient(to bottom, #0f0f0f, black);
-    padding: 10px 10%;
+    padding: 0 4%;
     grid-area: Center;
 }
 #footer_container * {
-    /* margin: auto; */
     text-align: center;
 }
 #footer_navigation ul {
@@ -200,12 +187,15 @@ footer {
 }
 #footer_copyright {
     margin: 0px;
-    padding: 10px;
+    padding: 1rem 4%;
     background-image: url(/images/geometric-1280x924.png);
     background-position: center center;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-align: center;
     grid-area: Copy;
+}
+#footer_address {
+    padding-bottom: 1rem;
 }
 #footer_left {
     background-image: linear-gradient(to bottom, #0f0f0f, black);
@@ -215,7 +205,84 @@ footer {
 }
 
 
+/* MEDIA QUERIES FOR SCREENS WIDER THAN 400 PX */
+@media screen and (min-width: 400px) {
+    /* HEADER STYLES */
+    h1 {
+        background-image: url(/images/geometric-1280x924.png);
+        font-size: 3rem;
+    }
+    #header_logo {
+        margin-top: 1%;
+        max-width: 50vw;
+    }
 
+
+    /* MAIN STYLES */
+    h2 {
+        text-align: left;
+        font-size: 2rem;
+    }
+    h3 {
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    section {
+        padding: 0 10%;
+        padding-bottom: .1rem;
+    }
+    #home_about_figure {
+        float: right;
+        width: 40%;
+        margin: 0.83rem 0 0.5rem 10%;
+        shape-outside: circle(50%);
+    }
+    /* Clearfix */
+    #home_section_about::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    #home_about_figure picture img {
+        max-width: 100%;
+        border-radius: 0;
+        border-bottom-left-radius: 5rem;
+    }
+    #home_about_fig_cap div {
+        display: block;
+    }
+    #home_about_fig_cap {
+        font-family: Roboto-LightItalic, sans-serif;
+        font-size: 0.75rem;
+        color: #ffffff;
+        text-align: right;
+        margin-bottom: 0.5rem;
+    }
+    #home_about_fig_cap:after {
+        content: '';
+    }
+    p {
+        line-height: 1.5em;
+        text-align: justify;
+        letter-spacing: 1px;
+    }
+    
+    
+    /* FOOTER STYLES */
+    footer {
+        grid-template-columns: 25% 50% 25%;
+    }
+    #footer_container {
+        padding: 0;
+        grid-area: Center;
+    }
+    #footer_copyright {
+        padding: 10px;
+    }
+    #footer_address {
+        padding-bottom: 1rem;
+    }
+}
 
 
 
