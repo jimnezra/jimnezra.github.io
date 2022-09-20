@@ -52,17 +52,22 @@
                             <li><label for="form-getintouch-fullname">Name:</label>
                                 <input type="text" 
                                         name="form-getintouch-fullname" 
+                                        id="form-getintouch-fullname" 
+                                        size="10"
                                         maxlength="50"
                                         minlength="1"
                                         placeholder="Max 50 characters..."></li>
                             <li><label for="form-getintouch-email">Email:</label>
                                 <input type="email" 
                                         name="form-getintouch-email" 
+                                        id="form-getintouch-email" 
+                                        size="10"
                                         maxlength="50"
                                         minlength="3"
                                         placeholder="Max 50 characters..."></li>
                             <li><label for="form-getintouch-topic">Topic:</label>
-                                <select name="form-getintouch-topic">
+                                <select name="form-getintouch-topic" 
+                                        id="form-getintouch-topic">
                                     <option selected>Education</option>
                                     <option>Research</option>
                                     <option>Teaching</option>
@@ -72,38 +77,41 @@
                                 </select></li>
                             <li><label for="form-getintouch-que_com">Question or comment:</label>
                                 <textarea name="form-getintouch-que_com" 
+                                            id="form-getintouch-que_com"
+                                            size="10"
                                             maxlength="500"
                                             minlength="1"
-                                            rows="5"
-                                            cols="100"
                                             placeholder="Max 500 characters..."></textarea></li>
                             <li><label for="form-getintouch-att_fil">Attach a file if required:</label>
                                 <input type="file"
-                                        name="form-getintouch-att_fil"></label></li>
+                                        name="form-getintouch-att_fil"
+                                        id="form-getintouch-att_fil"></label></li>
                             <li><label for="form-getintouch-age_gro">How old are you?</label>
-                                <ul>
+                                <ul id="form-getintouch-age_gro">
                                     <li><input type="radio" 
-                                                name="form-getintouch-age_gro" 
+                                                name="form-getintouch-age" 
                                                 value="under24" 
                                                 checked> under 24</li>
                                     <li><input type="radio" 
-                                                name="form-getintouch-age_gro" 
+                                                name="form-getintouch-age" 
                                                 value="25-34"> 25 to 34</li>
                                     <li><input type="radio" 
-                                                name="form-getintouch-age_gro" 
+                                                name="form-getintouch-age" 
                                                 value="35-44"> 35 to 44</li>
                                     <li><input type="radio" 
-                                                name="form-getintouch-age_gro" 
+                                                name="form-getintouch-age" 
                                                 value="over45"> 45+</li>
                                 </ul></li>
                             <li><label for="form-getintouch-mai_lis"></label>
                                 <input type="checkbox"
-                                        name="form-getintouch-mai_lis" 
+                                        name="form-getintouch-mai_lis"
+                                        id="form-getintouch-mai_lis" 
                                         value="yes"
                                         checked> Please add me to the email list and send me news and notifications by email.</li>
                         </ol>
                         <input type="hidden" 
-                                name="form-getintouch-success-link" 
+                                name="form-getintouch-success-link"
+                                id="form-getintouch-success-link" 
                                 value="/contact/thank_you.html">
                         <input type="submit" value="Submit">
                         <input type="reset" value="Reset">
@@ -152,8 +160,6 @@
                                 <textarea name="form-evaluate-con_fee" 
                                             maxlength="500"
                                             minlength="1"
-                                            rows="5"
-                                            cols="100"
                                             placeholder="Max 500 characters..."></textarea></li>
                             <li><label for="form-evaluate-att_fil">Attach a file if required:</label>
                                 <input type="file" 
