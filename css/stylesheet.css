@@ -228,9 +228,41 @@ input[type="checkbox"] {
     flex: 1 1 auto;
 }
 table {
+    background-color: #1f1f1f;
+    font-size: 0.9rem;
+    border-collapse: collapse;
     padding-bottom: 10px;
+    margin: 0 auto 0;
 }
-
+caption {
+    color: #00ffff;
+    caption-side: top;
+    margin-bottom: 0.5rem;
+}
+thead {
+    background-color: #1f1f1f;
+}
+tbody {
+    background-color: #1f1f1f;
+}
+tfoot {
+    background-color: #1f1f1f;
+    border: none;
+    border-top: 1px solid #00ffff;
+}
+tr {
+    border: none;
+}
+th {
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-bottom: 1px solid #00ffff;
+    border-top: 1px solid #00ffff;
+}
+td {
+    border: none;
+    padding: 0.5rem 0.5rem;
+}
 
 /* FOOTER STYLES */
 footer {
