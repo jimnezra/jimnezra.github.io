@@ -358,21 +358,19 @@ footer {
         width: 40%;
         margin: 0.83rem 0 0.5rem 10%;
         shape-outside: circle(50%);
-    }
+        z-index: 100;
+    } 
     /* Clearfix */
-    /* #home_section_about::after {
+    #home_section_about::after {
         content: "";
         clear: both;
         display: table;
-    } */
+    }
     #home_about_figure picture img {
         max-width: 100%;
         border-radius: 0;
         border-bottom-left-radius: 5rem;
     }
-    /* #home_about_fig_cap div {
-        display: block;
-    } */
     #home_about_fig_cap {
         font-family: Roboto-LightItalic, sans-serif;
         font-size: 0.75rem;
