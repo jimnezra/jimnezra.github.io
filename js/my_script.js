@@ -28,7 +28,14 @@ if (screenWidth < 400) {
 
     // Replacing caption elements
     // ourFig.replaceChild(newFigCap, swapMe);
-} 
+}
+
+// jQuery tests
+$(document).ready(function(){
+
+    // $("#header_text").hide()
+  
+});
 
 
 
