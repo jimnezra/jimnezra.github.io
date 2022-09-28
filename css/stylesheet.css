@@ -130,7 +130,7 @@ td, th {
 }
 #home_about_figure {
     float: center;
-    width: 50%;
+    width: 60%;
     margin: 0 auto 0;
     shape-outside: circle(50%);
     position: relative;
@@ -150,6 +150,7 @@ td, th {
     color: #ffffff;
     text-align: center;
     margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
 }
 #home_about_text {
     position: relative;
