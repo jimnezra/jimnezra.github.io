@@ -293,6 +293,13 @@ tfoot {
 #hr_contact {
     display: none;
 }
+h4 {
+    text-align: center;
+}
+.doi_link {
+    display: block;
+    margin: 0 auto;
+}
 
 
 /* FOOTER STYLES */
@@ -433,6 +440,12 @@ footer {
     }
     #google_maps {
         height: 30vw;
+    }
+    h4 {
+        text-align: justify;
+    }
+    .doi_link {
+        display: inline;
     }
     
     
