@@ -322,6 +322,11 @@ h4 {
     margin: 0 auto;
     height: 15rem;
 }
+.industry_logo {
+    height: 60px;
+    display: block;
+    margin: 1rem auto;
+}
 
 
 /* FOOTER STYLES */
@@ -470,12 +475,17 @@ footer {
         display: inline;
     }
     .publication_cover {
-        margin: 0 1rem 1rem 0;
+        margin: 0 1rem 2rem 0;
         float: left;
     }
     .publication_cover picture img {
         margin-left: 0;
         height: 15rem;
+    }
+
+    .industry_logo {
+        height: 75px;
+        margin: 2rem auto;
     }
     
     
@@ -529,6 +539,14 @@ footer {
         padding-right: 0;
         height: 29.5vw;
     }
+    .horizontal-flex-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+      }
+      .industry_logo {
+        margin: 1rem 3rem;
+      }
 
 }
 
