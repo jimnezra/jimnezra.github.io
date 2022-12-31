@@ -322,6 +322,16 @@ h4 {
     margin: 0 auto;
     height: 15rem;
 }
+.database_icon {
+    display: block;
+    margin: 0 auto;
+}
+.database_icon img {
+    border-radius: 0.5rem;
+    display: block;
+    margin: 0 auto;
+    height: 5rem;
+}
 .industry_logo {
     height: 60px;
     display: block;
@@ -482,6 +492,14 @@ footer {
         margin-left: 0;
         height: 15rem;
     }
+    .database_icon {
+        margin: 0 1rem 2rem 0;
+        float: left;
+    }
+    .database_icon picture img {
+        margin-left: 0;
+        height: 5rem;
+    }
 
     .industry_logo {
         height: 75px;
@@ -531,7 +549,7 @@ footer {
         width: 35%;
         float: left;
         clear: right;
-        margin: 1rem 5rem;
+        margin: 1rem 4rem;
     }
     #google_maps {
         float: right;
@@ -545,7 +563,7 @@ footer {
         justify-content: center;
       }
       .industry_logo {
-        margin: 1rem 3rem;
+        margin: 1rem 2rem;
       }
 
 }
