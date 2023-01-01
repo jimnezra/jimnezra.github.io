@@ -298,9 +298,12 @@ h4 {
 }
 #theses_section {
     overflow: hidden;
+    padding-bottom: 1rem;
 }
 .thesis_title {
     clear: both;
+    margin: 0;
+    padding: 0;
 }
 .doi_link {
     display: block;
@@ -336,6 +339,36 @@ h4 {
     height: 60px;
     display: block;
     margin: 1rem auto;
+}
+
+.collapsible {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+}
+.active, .collapsible:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+.collapsible_content {
+    margin: 1rem auto;
+    padding: 0 1rem;
+    display: none;
+    overflow: hidden;
+}
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 1rem;
+    color: #ffffff;
+    float: right;
+}
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 
