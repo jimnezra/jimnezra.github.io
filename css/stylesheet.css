@@ -296,7 +296,7 @@ tfoot {
 h4 {
     text-align: center;
 }
-#theses_section {
+#theses_section, #publications_section {
     overflow: hidden;
     padding-bottom: 1rem;
 }
