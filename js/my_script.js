@@ -30,12 +30,12 @@ if (screenWidth < 400) {
     // ourFig.replaceChild(newFigCap, swapMe);
 }
 
-// jQuery tests
-$(document).ready(function(){
+// // jQuery tests
+// $(document).ready(function(){
 
-    // $("#header_text").hide()
+//     // $("#header_text").hide()
   
-});
+// });
 
 // Collapsible button code
 var coll = document.getElementsByClassName("collapsible");
