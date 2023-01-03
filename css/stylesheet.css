@@ -296,7 +296,7 @@ tfoot {
 h4 {
     text-align: center;
 }
-#theses_section, #publications_section, #teaching_section_about {
+#theses_section, #publications_section, #teaching_section_about, #awarded_scholarships {
     overflow: hidden;
     padding-bottom: 1rem;
 }
