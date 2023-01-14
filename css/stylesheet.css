@@ -49,6 +49,9 @@ a:active {
     color: #008b8b;
     text-decoration: none;
 }
+ul li {
+    letter-spacing: 0.75px;
+}
 
 
 /* HEADER STYLES */
@@ -293,6 +296,9 @@ tfoot {
 #hr_contact {
     display: none;
 }
+.hr_collapsible {
+    clear: both;
+}
 h4 {
     text-align: center;
 }
@@ -324,6 +330,7 @@ h4 {
     display: block;
     margin: 0 auto;
     height: 15rem;
+    max-width: 90%;
 }
 .database_icon {
     display: block;
