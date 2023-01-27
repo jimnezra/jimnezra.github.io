@@ -52,6 +52,11 @@ a:active {
 ul li {
     letter-spacing: 0.75px;
 }
+#si_banner {
+    width: 80vw;
+    display: block;
+    margin: 0 auto;
+}
 
 
 /* HEADER STYLES */
@@ -449,6 +454,9 @@ footer {
         margin-top: 1%;
         max-width: 50vw;
     }
+    #si_banner {
+        width: 60vw;
+    }
 
 
     /* MAIN STYLES */
@@ -606,6 +614,9 @@ footer {
     .industry_logo {
         margin: 1rem 3rem;
         height: 60px;
+    }
+    #si_banner {
+        width: 40vw;
     }
 
 }
