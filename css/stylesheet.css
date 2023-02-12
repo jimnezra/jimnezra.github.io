@@ -307,7 +307,7 @@ tfoot {
 h4 {
     text-align: center;
 }
-#theses_section, #awarded_scholarships, #teaching_section_others, #other_education, #professional_certificates {
+#theses_section, #awarded_scholarships, #teaching_section_others, #other_education, #professional_certificates, #editorial {
     overflow: hidden;
     padding-bottom: 1rem;
 }
