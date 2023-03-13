@@ -337,6 +337,9 @@ h4 {
     height: 15rem;
     max-width: 90%;
 }
+.editorial_activity {
+    clear: both;
+}
 .database_icon {
     display: block;
     margin: 0 auto;
