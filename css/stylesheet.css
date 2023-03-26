@@ -477,7 +477,7 @@ footer {
     }
     #home_about_figure {
         float: right;
-        width: 40%;
+        width: 35%;
         margin: 0.83rem 0 0.5rem 10%;
         shape-outside: circle(50%);
         z-index: 100;
