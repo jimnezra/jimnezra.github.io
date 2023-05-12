@@ -58,6 +58,10 @@ ul li {
     margin: 0 auto;
 }
 
+#sm_logo:hover {
+    transform: rotate(45);
+}
+
 
 /* HEADER STYLES */
 header {
