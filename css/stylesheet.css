@@ -293,7 +293,7 @@ tfoot {
     text-align: center;
     padding: 0 1rem;
 }
-#rebel, #google_maps {
+#p35, #google_maps {
     display: block;
     margin: 1rem auto;
     width: 80%;
@@ -531,7 +531,7 @@ footer {
         width: 45%;
         float: left;
     }
-    #rebel, #google_maps {
+    #p35, #google_maps {
         width: 35%;
         float: right;
         clear: right;
@@ -609,12 +609,19 @@ footer {
         float: center;
         margin: 0;
     }
-    #rebel, #google_maps {
+    #google_maps {
         width: 35%;
         float: left;
         clear: right;
         margin: 1rem 4rem;
     }
+
+    #p35 {
+        width: 25%;
+        float: left;
+        margin: 1rem 4rem;
+    }
+
     #google_maps {
         float: right;
         margin-right: 5rem;
