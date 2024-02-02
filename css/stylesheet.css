@@ -84,6 +84,7 @@ h1 {
     visibility: hidden;
     transition-duration: 2s;
     visibility: visible;
+    padding-bottom: 3rem;
 }
 #header_navigation {
     background-image: linear-gradient(to top, #0f0f0f, black);
@@ -595,6 +596,8 @@ footer {
     #footer_soc_media ul li {
         margin: 0.5rem;
     }
+
+
 }
 
 
