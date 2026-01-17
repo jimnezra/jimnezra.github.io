@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+/*  Color pallet:
+    Background -> Black -> #000000
+    Container background -> Dark gray -> #0F0F0F
+    Unselected links - Cyan -> #00ffff
+    Text -> White -> #ffffff
+*/
 
 /* LOADING FONTS */
 @import url("/css/fonts.css");
@@ -70,15 +76,40 @@ ul li {
 header {
     background-color: #0f0f0f;
 }
+
 h1 {
     background-image: url(/images/geometric-640x462.png);
     background-position: center center;
+    background-size: cover;
+
     font-family: Roboto-Bold, sans-serif;
     font-size: 2rem;
     text-align: center;
-    margin: 0px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin: 0;
+
+    /* NEW: vertical centring */
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-shadow: -1px 0 black, 
+                 0 1px black, 
+                 1px 0 black, 
+                 0 -1px black;
 }
+
+/* Group containing name + degrees */
+.header-title-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Optical centring correction */
+    transform: translateY(1.5rem);
+}
+
 #header_logo {
     margin-top: 1%;
     max-width: 25vw;
@@ -110,6 +141,15 @@ h1 {
     box-shadow: #00ffff 0 2px 1px;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+}
+.header-degrees {
+    display: block;
+    margin-top: 0.4rem;
+    font-family: Roboto-Light, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    color: #ffffff;
+    opacity: 0.85;
 }
 
 
@@ -403,12 +443,12 @@ h5 {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
-#list_research_interests {
+.list_research_interests {
     text-align: center;
     list-style-type: none;
 } 
 
-#list_research_interests li {
+.list_research_interests li {
     margin-bottom: 0.5rem;
 } 
 
@@ -478,6 +518,7 @@ footer {
     h1 {
         background-image: url(/images/geometric-1280x924.png);
         font-size: 3rem;
+        min-height: 25vh;
     }
     #header_logo {
         margin-top: 1%;
@@ -490,6 +531,13 @@ footer {
         margin-bottom: 0.25rem;
         margin-top: 0.25rem;
     }
+    .header-title-group {
+        transform: translateY(2rem);
+    }
+    .header-degrees {
+        font-size: 1.1rem;
+    }
+
 
 
     /* MAIN STYLES */
@@ -592,7 +640,7 @@ footer {
     .industry_logo picture img {
         margin-bottom: 4rem;
     }
-    #list_research_interests {
+    .list_research_interests {
         text-align: justify;
         list-style-type: disc;
     } 
